@@ -1,6 +1,6 @@
-<h1 align="center" id="title">Paytm</h1>
+<h1 align="center" id="title">PayWallet</h1>
 
-<p id="description">Paytm clone is a robust and scalable platform built on the MERN (MongoDB, Express.js, React.js, Node.js) stack, offering users a comprehensive suite of financial services. With a user-friendly interface and cutting-edge security features, our platform ensures a seamless experience for managing transactions, checking balances, and facilitating money transfers.</p>
+<p id="description">PayWallet is a robust and scalable platform built on the MERN (MongoDB, Express.js, React.js, Node.js) stack, offering users a comprehensive suite of financial services. With a user-friendly interface and cutting-edge security features, our platform ensures a seamless experience for managing transactions, checking balances, and facilitating money transfers.</p>
 
   
   
@@ -61,7 +61,7 @@ npm run dev
 <p>9. Open any browser and enter or copy this url and paste it in</p>
 
 ```
-http://localhost:5173/dashboard
+http://localhost:5173/
 ```
 
   
