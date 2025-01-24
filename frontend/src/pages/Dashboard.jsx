@@ -18,7 +18,6 @@ export default function Dashboard() {
     return (
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex flex-col">
             <Navbar />
-
             <main className="flex-grow container mx-auto px-6 py-12 space-y-6">
                 <Suspense fallback={<div className="h-24 bg-white animate-pulse rounded-lg"></div>}>
                     <motion.div

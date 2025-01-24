@@ -15,12 +15,12 @@ export default function Signup() {
     const handleSignUp = useAuth("signup", { data });
 
     return (
-        <div className='min-h-screen w-full bg-gradient-to-br from-zinc-900 to-zinc-800 flex items-center justify-center p-4'>
+        <div className='min-h-screen w-full bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center p-4'>
             <motion.section 
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.3 }}
-                className='w-full max-w-md bg-zinc-800 rounded-2xl shadow-2xl overflow-hidden'
+                className='w-full max-w-md bg-white rounded-2xl shadow-xl overflow-hidden'
             >
                 <div className='p-8 space-y-6'>
                     <div className='text-center'>
@@ -28,11 +28,11 @@ export default function Signup() {
                             initial={{ y: -20, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
                             transition={{ delay: 0.2 }}
-                            className='text-4xl font-bold text-white mb-2'
+                            className='text-4xl font-bold text-blue-900 mb-2'
                         >
                             Create Account
                         </motion.h2>
-                        <p className='text-zinc-400 text-sm'>Enter your information to get started</p>
+                        <p className='text-blue-600 text-sm'>Enter your information to get started</p>
                     </div>
 
                     <div className='space-y-4'>
@@ -43,7 +43,6 @@ export default function Signup() {
                                 transition={{ delay: 0.3 }}
                             >
                                 <InputBox 
-                                    icon={<FaUser className='text-zinc-400' />}
                                     onChange={handleData} 
                                     value={data.firstName} 
                                     placeholder='First Name' 
@@ -57,7 +56,6 @@ export default function Signup() {
                                 transition={{ delay: 0.3 }}
                             >
                                 <InputBox 
-                                    icon={<FaUser className='text-zinc-400' />}
                                     onChange={handleData} 
                                     value={data.lastName} 
                                     placeholder='Last Name' 
@@ -73,7 +71,6 @@ export default function Signup() {
                             transition={{ delay: 0.4 }}
                         >
                             <InputBox 
-                                icon={<FaEnvelope className='text-zinc-400' />}
                                 onChange={handleData} 
                                 value={data.username} 
                                 placeholder='johndoe@gmail.com' 
@@ -89,7 +86,6 @@ export default function Signup() {
                             transition={{ delay: 0.5 }}
                         >
                             <InputBox 
-                                icon={<FaLock className='text-zinc-400' />}
                                 onChange={handleData} 
                                 value={data.password} 
                                 placeholder='Password' 
@@ -104,7 +100,7 @@ export default function Signup() {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={handleSignUp} 
-                        className='w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors duration-300 ease-in-out font-semibold'
+                        className='w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors duration-300 ease-in-out font-semibold'
                     >
                         Sign Up
                     </motion.button>
@@ -113,12 +109,12 @@ export default function Signup() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ delay: 0.6 }}
-                        className='text-center text-zinc-400'
+                        className='text-center text-blue-600'
                     >
                         Already have an account? {' '}
                         <Link 
                             to="/signin" 
-                            className='text-indigo-400 hover:text-indigo-300 transition-colors'
+                            className='text-blue-800 hover:text-blue-900 transition-colors'
                         >
                             Login
                         </Link>
