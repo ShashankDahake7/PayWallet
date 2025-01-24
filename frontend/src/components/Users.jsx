@@ -10,20 +10,23 @@ export default function Users() {
         <>
             <Filter />
             {users.map((user) => (
-                <div key={user._id} className=' w-full py-5'>
-                    <div className=' w-full lg:max-w-7xl mx-auto px-4 md:px-0 text-white flex flex-row justify-between gap-3'>
-                        <div className=' flex flex-row gap-3 '>
-                            <div className=' h-10 w-10 bg-zinc-600 flex justify-center items-center rounded-full ' >
-                                <span className=' font-bold text-lg'>{user.firstName[0].toUpperCase()}</span>
+                <div key={user._id} className="w-full py-4 border-b border-blue-100">
+                    <div className="w-full lg:max-w-7xl mx-auto px-4 md:px-0 flex flex-row justify-between items-center">
+                        <div className="flex flex-row items-center gap-4">
+                            <div className="h-10 w-10 bg-blue-600 text-white flex justify-center items-center rounded-full">
+                                <span className="font-bold text-lg">{user.firstName[0].toUpperCase()}</span>
                             </div>
-                            <div className=' flex items-center'>
-                                <span className=' font-bold'>{user.firstName} {user.lastName}</span>
+                            <div>
+                                <span className="text-blue-900 font-bold">{user.firstName} {user.lastName}</span>
                             </div>
                         </div>
                         <div>
-                            <button onClick={(e) => {
-                                navigate(`/sendmoney?id=${user._id}&name=${user.firstName}`)
-                            }} className=' bg-indigo-600 hover:bg-indigo-500 py-2 px-3 rounded-md'>Send Money</button>
+                            <button 
+                                onClick={() => navigate(`/sendmoney?id=${user._id}&name=${user.firstName}`)} 
+                                className="bg-blue-600 text-white hover:bg-blue-700 py-2 px-4 rounded-md transition"
+                            >
+                                Send Money
+                            </button>
                         </div>
                     </div>
                 </div>

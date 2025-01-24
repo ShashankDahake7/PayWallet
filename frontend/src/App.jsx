@@ -10,6 +10,7 @@ import { alertAtom } from './store/atoms/user';
 import UserLoading from './Loader/UserLoading';
 import Users from './components/Users';
 import TransactionHistory from './pages/TransactionHistory';
+import Home from './pages/Home';
 
 export default function App() {
   const [alert, setAlert] = useRecoilState(alertAtom);
@@ -26,10 +27,11 @@ export default function App() {
     <BrowserRouter>
       <Alert />
       <Routes>
-        <Route path='dashboard' element={<Dashboard />}>
+        <Route path='/' element={<Home />} />
+        <Route path='/dashboard' element={<Dashboard />} >
           <Route index element={<Suspense fallback={<UserLoading />}><Users /> </Suspense>} />
           <Route path='history' element={<TransactionHistory />} />
-        </Route >
+        </Route>
         <Route path='signup' element={<Signup />} />
         <Route path='signin' element={<Signin />} />
         <Route path='sendmoney' element={<Send />} />

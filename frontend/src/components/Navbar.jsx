@@ -7,30 +7,34 @@ export default function Navbar() {
     const { user } = useRecoilValue(balanceAtom);
     const navigate = useNavigate();
     return (
-        <nav className=' w-full bg-zinc-950 border-b-2 border-zinc-800'>
-            <div className=' container mx-auto bg-transparent p-3 flex flex-row justify-between items-center text-white'>
+        <nav className="w-full bg-white shadow-md border-b border-blue-100">
+            <div className="container mx-auto px-6 py-4 flex flex-row justify-between items-center">
                 <div>
-                    <Link to="/dashboard">
-                        <span className=' text-xl font-bold'>Payments App</span>
+                    <Link to="/dashboard" className="text-2xl font-bold text-blue-600">
+                        PayWallet
                     </Link>
                 </div>
-                <div className=' flex flex-row gap-2 items-center'>
-                    <button onClick={() => {
-                        navigate("history")
-                    }} className=' hover:bg-zinc-700 rounded-md px-3 py-1'>
+                <div className="flex flex-row gap-4 items-center">
+                    <button 
+                        onClick={() => navigate("history")} 
+                        className="text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition"
+                    >
                         History
                     </button>
-                    <button onClick={() => {
-                        localStorage.removeItem("token");
-                        navigate("/signin")
-                    }} className=' hover:bg-zinc-700 rounded-md px-3 py-1'>
+                    <button 
+                        onClick={() => {
+                            localStorage.removeItem("token");
+                            navigate("/signin")
+                        }} 
+                        className="text-blue-600 hover:bg-blue-50 rounded-md px-3 py-1 transition"
+                    >
                         Log Out
                     </button>
-                    <div>
-                        <span>Hello, {user.firstName}</span>
+                    <div className="text-blue-800 mr-2">
+                        Hello, {user.firstName}
                     </div>
-                    <div className=' h-9 w-9 bg-zinc-600 flex justify-center items-center rounded-full ' >
-                        <span className=' font-bold text-lg'>{user.firstName[0].toUpperCase()}</span>
+                    <div className="h-9 w-9 bg-blue-600 text-white flex justify-center items-center rounded-full">
+                        <span className="font-bold text-lg">{user.firstName[0].toUpperCase()}</span>
                     </div>
                 </div>
             </div>
