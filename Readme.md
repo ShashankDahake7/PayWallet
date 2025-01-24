@@ -20,9 +20,9 @@ Here're some of the project's best features:
 
 <h2>🛠️ Installation Steps:</h2>
 
-<p>1. cd Server</p>
+<p>1. cd backend</p>
 
-<p>2. Install dependencies for Server</p>
+<p>2. Install dependencies for backend</p>
 
 ```
 npm install
@@ -32,27 +32,27 @@ npm install
 
 ```
 PORT = 4000
-JWT_SECRTE = YOUR_JWT_SECRTE
+JWT_SECRET = YOUR_JWT_SECRET
 MONGO_URL = YOUR_MONGO_URL 
 ```
 
-<p>4. Start Server</p>
+<p>4. Start backend</p>
 
 ```
 npm start
 ```
 
-<p>5. Open Separate terminal for Client</p>
+<p>5. Open Separate terminal for frontend</p>
 
-<p>6. cd Client</p>
+<p>6. cd frontend</p>
 
-<p>7. Install dependencies for Client</p>
+<p>7. Install dependencies for frontend</p>
 
 ```
 npm install
 ```
 
-<p>8. Run Client</p>
+<p>8. Run frontend</p>
 
 ```
 npm run dev
