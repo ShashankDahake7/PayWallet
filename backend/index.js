@@ -17,6 +17,6 @@ app.use(express.json());
 app.use("/api/v1", rootRouter);
 
 
-app.listen(PORT, ()=> {
-    console.log(`server is running on http://localhost:${PORT}`);
+app.listen(4000, ()=> {
+    console.log(`server is running on http://localhost/4000`);
 })
