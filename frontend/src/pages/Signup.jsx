@@ -72,7 +72,7 @@ export default function Signup() {
                             <InputBox 
                                 onChange={handleData} 
                                 value={data.username} 
-                                placeholder='johndoe@gmail.com' 
+                                placeholder='shashank@gmail.com' 
                                 label="Email" 
                                 name="username" 
                                 type="email"

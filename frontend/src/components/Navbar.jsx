@@ -30,12 +30,12 @@ export default function Navbar() {
                     >
                         Log Out
                     </button>
-                    <div className="text-blue-800 mr-2">
+                    {/* <div className="text-blue-800 mr-2">
                         Hello, {user.firstName}
                     </div>
                     <div className="h-9 w-9 bg-blue-600 text-white flex justify-center items-center rounded-full">
                         <span className="font-bold text-lg">{user.firstName[0].toUpperCase()}</span>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </nav>
