@@ -8,7 +8,7 @@ export default function TransactionHistory() {
     const [firstname, setFirstName] = useState("");
 
     async function handleData() {
-        const res = await axios.get("http://localhost:4000/api/v1/account/history", {
+        const res = await axios.get("https://paywallet-backend1.onrender.com/api/v1/account/history", {
             headers: { Authorization: "Bearer " + localStorage.getItem("token") }
         });
         setFirstName(res.data.user);

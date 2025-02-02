@@ -5,7 +5,6 @@ import { useRecoilState } from 'recoil';
 import { signUpAtom } from '../store/atoms/user';
 import { useAuth } from '../hooks/Auth';
 import { motion } from 'framer-motion';
-import { FaUser, FaEnvelope, FaLock } from 'react-icons/fa';
 
 export default function Signup() {
     const [data, setData] = useRecoilState(signUpAtom);

@@ -10,7 +10,7 @@ export function useAuth(route, { data }) {
     const [signUp, setSignUp] = useRecoilState(signUpAtom);
     const handleAuth = useRecoilCallback(({ set }) => async () => {
         try {
-            const response = await axios.post(`http://localhost:4000/api/v1/user/${route}`, data);
+            const response = await axios.post(`https://paywallet-backend1.onrender.com/api/v1/user/${route}`, data);
             localStorage.setItem("token", response.data.token);
             setAlert({ display: true, color: "green", message: response.data.message });
             setTimeout(()=> {
